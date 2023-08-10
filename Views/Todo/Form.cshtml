@@ -1,0 +1,19 @@
+@model TWTodos.Models.Todo
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="POST">
+  <div class="mb-3">
+    <label asp-for="Title">Título</label>
+    <input asp-for="Title" class="form-control">
+    <span asp-validation-for="Title" class="text-danger"></span>
+  </div>
+
+  <div class="mb-3">
+    <label asp-for="Deadline">Data de entrega</label>
+    <input asp-for="Deadline" type="date" class="form-control">
+    <span asp-validation-for="Deadline" class="text-danger"></span>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Salvar</button>
+</form>

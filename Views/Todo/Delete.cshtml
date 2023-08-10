@@ -1,0 +1,10 @@
+@model TWTodos.Models.Todo
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Tem certeza que deseja excluir a tarefa <strong>@Model.Title</strong>?</p>
+
+<form method="POST">
+  <button class="btn btn-danger" type="submit">Excluir</button>
+  <a asp-controller="Todo" asp-action="Index" class="btn btn-primary">Cancelar</a>
+</form>
